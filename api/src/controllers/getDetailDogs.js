@@ -1,11 +1,8 @@
 const axios = require('axios');
-const { DataTypes } = require('sequelize');
-const { conn } = require('../db.js');
-// const Dog = require('../models/Dog')(conn);
-// const Temp = require ('../models/Temp')(conn);
 const { Dog, Temp } = require('../db.js');
+// const imagenDefault = '../Imagenes/perro-default.png';
 
-// const apiKey = 'api_key=live_ii0iGSdB15xnUXslsyAADAH1nHLdSd3h38f6tifLNXL8MnnB7VuoI3kHBPY1SRac';
+
 
 
  const getDetailDogs= async(req, res)=> {
@@ -44,6 +41,9 @@ const { Dog, Temp } = require('../db.js');
       const dogApiResponse = await axios.get(dogApiEndpoint);
       const dogFromAPI = dogApiResponse.data;
 
+      // console.log('dogFromAPI.image:', dogFromAPI.reference_image_id);
+      // console.log('dogFromAPI.image.url:', dogFromAPI.image && `https://cdn2.thedogapi.com/images/${dogFromAPI.reference_image_id}.jpg`);
+
       dogDetails = {
         id: dogFromAPI.id,
         name: dogFromAPI.name,
@@ -54,7 +54,7 @@ const { Dog, Temp } = require('../db.js');
         life_span: dogFromAPI.life_span,
         temperament: dogFromAPI.temperament ? dogFromAPI.temperament.split(', ') : [],
         origin: dogFromAPI.origin,
-        image_url: dogFromAPI.image && dogFromAPI.image.url ? dogFromAPI.image.url : '',
+        image_url: dogFromAPI.image && dogFromAPI.image.url ? dogFromAPI.image.url : `https://cdn2.thedogapi.com/images/${dogFromAPI.reference_image_id}.jpg`,
       };
     }
 

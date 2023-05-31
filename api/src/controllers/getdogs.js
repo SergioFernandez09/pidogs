@@ -15,7 +15,7 @@ const endpoint = 'https://api.thedogapi.com/v1/breeds';
       });
   
       const dogBreeds = response.data;
-      // Aquí puedes procesar el arreglo de razas de perro (dogBreeds) según tus necesidades
+      
       return dogBreeds ? res.status(200).json(dogBreeds) : res.status(404).send("No tenemos razas")
     } catch (error) {
       console.error('Error al obtener las razas de perro:', error);

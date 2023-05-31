@@ -1,0 +1,47 @@
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f5f5f5; /* Color de fondo suave */
+  }
+  
+  .landing-page img {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Altura máxima de la imagen */
+    object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
+  }
+  
+  .landing-content {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .landing-content h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333333; /* Color del texto principal */
+  }
+  
+  .landing-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #666666; /* Color del texto secundario */
+  }
+  
+  .landing-page button {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #ff7f50; /* Color de fondo del botón */
+    color: #ffffff; /* Color del texto del botón */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .landing-page button:hover {
+    background-color: #ff6347; /* Color de fondo del botón al pasar el cursor */
+  }
+  
