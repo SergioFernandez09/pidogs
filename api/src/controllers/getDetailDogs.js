@@ -53,7 +53,7 @@ const { Dog, Temp } = require('../db.js');
         breed_group: dogFromAPI.breed_group,
         life_span: dogFromAPI.life_span,
         temperament: dogFromAPI.temperament ? dogFromAPI.temperament.split(', ') : [],
-        origin: dogFromAPI.origin,
+        origin: dogFromAPI.origin ? dogFromAPI.origin : ('Unknown'),
         image_url: dogFromAPI.image && dogFromAPI.image.url ? dogFromAPI.image.url : `https://cdn2.thedogapi.com/images/${dogFromAPI.reference_image_id}.jpg`,
       };
     }

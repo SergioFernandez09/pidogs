@@ -1,5 +1,118 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  width: auto;
+}
+.dog-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+  
+}
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 20px 50px;
+  border: 2px solid #7effb2;
+  border-radius: 8px;
+}
+@keyframes pulse {
+  from {
+      box-shadow: 0 0 25px #7effb2, 0 0 50px #2cd9ff;
+  }
+}
+.button:focus {
+  animation: pulse 0.5s ease-in-out;
+}
+
+.detail-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ff6600;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.detail-link:hover {
+  background-color: #ff4c00;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  
+}
+
+.page-number {
+  border: none;
+  background-color: #f7f3f377;
+  color: #333;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+}
+
+.page-number:hover {
+  background-color: #f8a269;
+}
+
+.page-number.active {
+  background-color: #ff6f00;
+  color: #fff;
+}
+.page-number.prev,
+.page-number.next {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7f3f377;
+  color: #333;
+  padding: 5px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 10px;
+}
+
+.page-number.prev::before,
+.page-number.next::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #333;
+}
+
+.page-number.prev::before {
+  left: -15px;
+}
+
+.page-number.next::after {
+  right: -15px;
+}
+
+.page-number.prev:hover,
+.page-number.next:hover {
+  background-color: #f8a269;
+}
+
+.page-number.prev.active,
+.page-number.next.active {
+  background-color: #ff6f00;
+  color: #fff;
 }
 
 .App-logo {
