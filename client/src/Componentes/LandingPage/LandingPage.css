@@ -4,12 +4,13 @@
     align-items: center;
     justify-content: center;
     background-color: #ffffff; /* Color de fondo suave */
+    margin-top: -80px;
   }
   
   .landing-page img {
-    width: 100%;
+    width: 1280px;
     height: auto;
-    max-height: 400px; /* Altura máxima de la imagen */
+    max-height: 800px; /* Altura máxima de la imagen */
     object-fit: cover; /* Ajusta el tamaño de la imagen sin deformarla */
   }
   

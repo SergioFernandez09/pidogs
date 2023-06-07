@@ -31,15 +31,13 @@ const postNewDog = async (req, res) => {
     // Actualizar el último ID utilizado
     lastDogId = id;
 
-    // Buscar los temperamentos en la base de datos
-    const temperamentosEncontrados = await Temp.findAll({
-      where: {
-        nombre: temperamentos,
-      },
-    });
+   // Crear los temperamentos en la base de datos
+   const createdTemperaments = await Promise.all(
+    temperamentos.map((temperamento) => Temp.create({ nombre: temperamento }))
+  );
 
-    // Asociar los temperamentos encontrados al perro creado
-    await newDog.addTemps(temperamentosEncontrados);
+  // Asociar los temperamentos creados al perro creado
+  await newDog.addTemps(createdTemperaments);
 
     res.status(201).json({ message: 'Perro creado exitosamente.' });
   } catch (error) {

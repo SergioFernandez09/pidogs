@@ -6,7 +6,7 @@
     padding-bottom: 20px;
     flex-direction: column;
     overflow: hidden; 
-    
+    margin-top: 25px;
     
 }
 
@@ -42,7 +42,7 @@
 }
 .details-container{
     padding: 20px;
-    margin: 25px;
+    margin: 50px;
 }
 
 .Detail-loading {

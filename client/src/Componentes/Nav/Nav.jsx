@@ -11,12 +11,12 @@ const Nav = ({dogs, handleSearch }) => {
       <nav className="nav-container">
         <div>
         <FaDog size={24} />
-        <Link to="/" className="logo" >Dog App</Link>
+        <Link to="/" className="logo" >DogPedia</Link>
         </div>
         <div className="nav-links">
-          <Link to="/home" className="nav-link">Home</Link>
-          <Link to="/about" className="nav-link">About</Link>
-          <Link to="/form" className="nav-link">Create Dog</Link>
+          <Link to="/home" className="nav-link">Inicio</Link>
+          <Link to="/about" className="nav-link">Nosotros</Link>
+          <Link to="/form" className="nav-link">Crea Tu Perro</Link>
         </div>
         <div className="dog-filter-container">
         <SearchBar dogs={dogs} setFilteredDogs={handleSearch} />

@@ -11,7 +11,8 @@ import Footer from './Componentes/Footer/Footer';
 import LandingPage from './Componentes/LandingPage/LandingPage';
 import DetailPage from './Componentes/DetailPage/DetailPage';
 import FormPage from './Componentes/FormPage/FormPage';
-// import FormPage from './FormPage';
+import About from './Componentes/About/About';
+
 
 const App = () => {
   const [dogs, setDogs] = useState([]);
@@ -97,8 +98,9 @@ const App = () => {
           </Route>
           <Route path="/detail/:id" component={DetailPage} />
           <Route path="/form" component={FormPage} />
+          <Route path="/about" component={About} />
         </Switch>
-        {window.location.pathname !== '/' && <Footer />}
+        <Footer />
       </div>
     </Router>
   );

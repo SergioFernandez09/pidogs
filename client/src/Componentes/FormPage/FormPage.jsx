@@ -99,12 +99,12 @@ const FormPage = () => {
         </div>
         <div className="row">
           <div className="form-group">
-            <label htmlFor="altura" className="form-label">Altura:</label>
+            <label htmlFor="altura" className="form-label">Altura: (cm)</label>
             <input type="number" id="altura" name="altura" value={formData.altura} onChange={handleChange} className="form-input" />
             {errors.altura && <div className="error-message">{errors.altura}</div>}
           </div>
           <div className="form-group">
-            <label htmlFor="peso" className="form-label">Peso:</label>
+            <label htmlFor="peso" className="form-label">Peso: (kg)</label>
             <input type="number" id="peso" name="peso" value={formData.peso} onChange={handleChange} className="form-input" />
             {errors.peso && <div className="error-message">{errors.peso}</div>}
           </div>
